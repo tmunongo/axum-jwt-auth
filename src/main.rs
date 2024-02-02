@@ -39,7 +39,7 @@ async fn main() {
             db: pool.clone(),
             env: config.clone(),
         }));
-    
+
     println!("🚀 Server running on port 8000!");
     axum::Server::bind(&"0.0.0.0:8000".parse().unwrap())
         .serve(app.into_make_service())
